@@ -26,6 +26,9 @@
 | 020 | 020_sound_effects.md | 音效系统 |
 | 021 | 021_main_menu.md | 主菜单 |
 | 022 | 022_fix_display.md | 修复画面显示 |
+| 023 | 023_sprite_system_integration.md | Sprite系统集成 |
+| 024 | 024_damage_visualization.md | 伤害可视化 |
+| 025 | 025_player_sprite_implementation.md | 玩家精灵实现 |
 
 ## Reference Documents
 
@@ -44,4 +47,4 @@
 
 ---
 
-*Updated: 2026-04-28 (Phase 22 completed)*
+*Updated: 2026-04-28 (Phase 25 completed)*
