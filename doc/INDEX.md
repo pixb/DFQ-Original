@@ -29,6 +29,8 @@
 | 023 | 023_sprite_system_integration.md | Sprite系统集成 |
 | 024 | 024_damage_visualization.md | 伤害可视化 |
 | 025 | 025_player_sprite_implementation.md | 玩家精灵实现 |
+| 026 | 026_background_music.md | 背景音乐系统 |
+| 027 | 027_enemy_sprite.md | 敌人精灵图 |
 
 ## Reference Documents
 
@@ -47,4 +49,4 @@
 
 ---
 
-*Updated: 2026-04-28 (Phase 25 completed)*
+*Updated: 2026-04-28 (Phase 27 completed)*
