@@ -25,6 +25,7 @@
 | 019 | 019_health_bar.md | 血条UI |
 | 020 | 020_sound_effects.md | 音效系统 |
 | 021 | 021_main_menu.md | 主菜单 |
+| 022 | 022_fix_display.md | 修复画面显示 |
 
 ## Reference Documents
 
@@ -43,4 +44,4 @@
 
 ---
 
-*Updated: 2026-04-28*
+*Updated: 2026-04-28 (Phase 22 completed)*
