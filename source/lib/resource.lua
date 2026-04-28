@@ -69,14 +69,14 @@ function _RESOURCE.NewSoundData(path)
     return love.sound.newSoundData(fileData)
 end
 
-function _RESOURCE.NewSource(path)
+function _RESOURCE.NewSource(path, sourceType)
     if (type(path) ~= "string") then
         return love.audio.newSource(path)
     end
 
     local fileData = _FILE.NewFileData(path)
 
-    return love.audio.newSource(fileData)
+    return love.audio.newSource(fileData, sourceType or "stream")
 end
 
 ---@param path string
