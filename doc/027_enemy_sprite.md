@@ -7,26 +7,22 @@
 ## 完成任务
 
 ### 1. 敌人精灵图实现
-- **状态**: ⏳ 等待手动操作
-- **需要的文件**: `asset/textures/goblin.png`
+- **状态**: ✅ 已完成
+- **文件**: `asset/textures/goblin.png`
 
-### 2. 待完成任务
+### 2. 场景修改
+- **状态**: ✅ 已完成
+- **修改文件**: `scenes/enemy.tscn`
+- **变更**: 替换 ColorRect 为 Sprite2D
 
-#### 需要手动操作：
+### 3. 脚本修改
+- **状态**: ✅ 已完成
+- **修改文件**: `scripts/enemy.gd`
+- **变更**: 添加 sprite 初始化和翻转控制
 
-**步骤 1**: 复制 goblin 纹理到 Godot 项目
-```bash
-cp /Volumes/data/dev/code/game/DFQ-Original/asset/image/actor/duelist/goblin/skin/base/0.png /Volumes/data/dev/code/godot/dfq/asset/textures/goblin.png
-```
+### 4. 技术实现
 
-**步骤 2**: 在 Godot 中导入纹理
-- 打开 Godot 项目
-- 刷新资源管理器
-- 等待 goblin.png 自动导入
-
-**步骤 3**: 修改 enemy.tscn 替换 DebugRect
-
-将 `enemy.tscn` 中的 ColorRect 替换为 Sprite2D：
+#### 场景修改 (enemy.tscn)
 
 ```tscn
 [gd_scene format=3 uid="uid://tq2nkhj3ad86"]
@@ -49,7 +45,34 @@ texture = ExtResource("2_goblin")
 flip_h = false
 ```
 
-### 3. 技术说明
+**注意**: 在 tscn 文件中不能直接使用 `load()` 函数，必须通过 `ext_resource` 定义外部资源，然后用 `ExtResource()` 引用。
+
+#### 脚本修改 (enemy.gd)
+
+```gdscript
+var sprite: Sprite2D = null
+
+func _ready():
+    start_position = global_position
+    current_state = EnemyState.IDLE
+    sprite = $Sprite2D
+    if sprite:
+        print("Enemy sprite initialized")
+
+func _physics_process(delta: float) -> void:
+    update_ai(delta)
+    update_sprite()
+    move_and_slide()
+
+func update_sprite() -> void:
+    if not sprite:
+        return
+    
+    if velocity.x != 0:
+        sprite.flip_h = velocity.x < 0
+```
+
+### 5. 技术说明
 
 敌人精灵系统比玩家更复杂，原项目使用多层精灵系统：
 
@@ -64,7 +87,7 @@ flip_h = false
 
 当前实现仅使用 skin/base/0.png 作为基础纹理，完整的多层精灵系统可以在后续阶段实现。
 
-### 4. 功能特性
+### 6. 功能特性
 
 | 特性 | 说明 |
 |------|------|
@@ -74,8 +97,8 @@ flip_h = false
 
 ## 相关文件
 
-- `asset/textures/goblin.png` - 敌人精灵纹理（待复制）
-- `scenes/enemy.tscn` - 敌人场景（待修改）
+- `asset/textures/goblin.png` - 敌人精灵纹理
+- `scenes/enemy.tscn` - 敌人场景
 - `scripts/enemy.gd` - 敌人控制器
 
 ---
