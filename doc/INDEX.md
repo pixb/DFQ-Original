@@ -31,6 +31,14 @@
 | 025 | 025_player_sprite_implementation.md | 玩家精灵实现 |
 | 026 | 026_background_music.md | 背景音乐系统 |
 | 027 | 027_enemy_sprite.md | 敌人精灵图 |
+| 028 | 028_sprite_animation.md | 精灵动画系统 |
+| 029 | 029_project_comparison.md | LÖVE与Godot项目比较 |
+| 030 | 030_parallax_background.md | 视差背景系统 |
+| 031 | 031_full_parallax.md | 完整视差滚动系统 |
+| 032 | 032_decorations.md | 场景装饰元素 |
+| 040 | 040_RENDER_COMPARISON.md | 渲染差异分析与修复规划 |
+| 041 | 041_SPRITE_FIX.md | 精灵修复文档 |
+| 042 | 042_DECORATION_IMPLEMENTATION.md | 装饰系统实现文档 |
 
 ## Reference Documents
 
@@ -49,4 +57,4 @@
 
 ---
 
-*Updated: 2026-04-28 (Phase 27 completed)*
+*Updated: 2026-04-29 (Phase 40-42 completed, Render Comparison and Sprite Fix done)*

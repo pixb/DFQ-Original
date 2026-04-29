@@ -10,15 +10,20 @@
 ## 项目位置
 
 - **原 LÖVE 项目**: `/Volumes/data/dev/code/game/DFQ-Original/`
-- **Godot 项目**: `/Volumes/data/dev/code/godot/dfq/`
-├── project.godot        # Godot 项目配置
-├── main.tscn           # 主场景
-├── scripts/           # GDScript 脚本
-├── addons/            # 插件 (MCP)
-├── source/            # 原 LÖVE 源码 (参考)
-├── asset/             # 资源文件
-├── config/            # 配置文件
-└── doc/              # 迁移文档
+- **Godot 项目**: `/Volumes/data/dev/code/game/DFQ-Original/dfq/`
+```
+DFQ-Original/
+├── dfq/                 # Godot 项目 (已从 godot/ 迁移)
+│   ├── project.godot   # Godot 项目配置
+│   ├── main.tscn       # 主场景
+│   ├── scripts/        # GDScript 脚本
+│   ├── scenes/         # 场景文件
+│   ├── asset/          # 资源文件
+│   └── addons/         # 插件 (MCP)
+├── source/             # 原 LÖVE 源码 (参考)
+├── asset/              # LÖVE 资源文件
+├── config/             # 配置文件
+└── doc/                # 迁移文档
 ```
 
 ## 开发命令
